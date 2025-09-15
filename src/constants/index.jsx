@@ -2,6 +2,48 @@ import { FaBolt, FaShareAlt, FaUserPlus } from 'react-icons/fa'
 import { FiFilter } from 'react-icons/fi'
 import { IoIosSettings, IoMdMail } from 'react-icons/io'
 import { IoLinkSharp, IoShield } from 'react-icons/io5'
+import { IoLanguage } from 'react-icons/io5'
+import { IoMdMoon } from 'react-icons/io'
+import { IoLink } from 'react-icons/io5'
+import { IoPersonSharp } from 'react-icons/io5'
+
+export const navigation = [
+  {
+    section: '#features',
+    name: 'المزايا',
+  },
+  {
+    section: '#testemonials',
+    name: 'اراء',
+  },
+  {
+    section: '#faq',
+    name: 'الأسئلة',
+  },
+  {
+    section: '#contact',
+    name: 'تواصل',
+  },
+]
+
+export const navIcons = [
+  {
+    name: 'lang',
+    icon: <IoLanguage />,
+  },
+  {
+    name: 'theme',
+    icon: <IoMdMoon />,
+  },
+  {
+    name: 'link',
+    icon: <IoLink />,
+  },
+  {
+    name: 'profile',
+    icon: <IoPersonSharp />,
+  },
+]
 
 export const features = [
   {

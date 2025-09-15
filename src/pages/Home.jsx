@@ -2,10 +2,12 @@ import Features from '../components/Features'
 import Testimonials from '../components/Testimonials'
 import FAQ from '../components/FAQ'
 import Footer from '../components/Footer'
+import Navigation from '../components/Navigation'
 
 function Home() {
   return (
-    <div className="font-cairo">
+    <div className="font-cairo bg-white">
+      <Navigation />
       <div className="container mx-auto px-4 py-8">
         <Features />
       </div>
