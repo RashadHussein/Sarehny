@@ -1,11 +1,23 @@
-import Features from "../components/Features"
-import TestimonialsFaqFooter from "../components/FinalPart"
+import Features from '../components/Features'
+import Testimonials from '../components/Testimonials'
+import FAQ from '../components/FAQ'
+import Footer from '../components/Footer'
 
 function Home() {
-  return <div className="container mx-auto px-4 py-8">
-    <Features />
-    <TestimonialsFaqFooter />
-  </div>
+  return (
+    <div className="font-cairo">
+      <div className="container mx-auto px-4 py-8">
+        <Features />
+      </div>
+      <div className=" bg-gray-50 text-slate-900 antialiased px-4 py-8">
+        <div className="max-w-[1100px] mx-auto">
+          <Testimonials />
+          <FAQ />
+          <Footer />
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Home
