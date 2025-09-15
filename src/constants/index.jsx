@@ -6,6 +6,7 @@ import { IoLanguage } from 'react-icons/io5'
 import { IoMdMoon } from 'react-icons/io'
 import { IoLink } from 'react-icons/io5'
 import { IoPersonSharp } from 'react-icons/io5'
+import { FaStar } from 'react-icons/fa'
 
 export const navigation = [
   {
@@ -44,7 +45,23 @@ export const navIcons = [
     icon: <IoPersonSharp />,
   },
 ]
-
+export const heroContent = [
+  {
+    name: 'رسائل اليوم',
+    number: '1,248',
+    icon: null,
+  },
+  {
+    name: 'مستخدمون',
+    number: '5,432',
+    icon: null,
+  },
+  {
+    name: 'متوسط التقييم',
+    number: '4.8',
+    icon: <FaStar />,
+  },
+]
 export const features = [
   {
     title: 'حماية وخصوصية',
