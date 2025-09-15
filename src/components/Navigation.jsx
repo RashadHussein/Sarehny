@@ -1,12 +1,22 @@
 import { navIcons, navigation } from '../constants'
 import MobileNavigation from './MobileNavigatin'
+import { Button } from './ui/button'
+import { useNavigate } from 'react-router-dom'
 
 const Navigation = () => {
+
+  const navigate = useNavigate()
+  const handleLogin = () => {
+    navigate("/login")
+  }
   return (
     <nav className="p-8 container mx-auto flex justify-between items-center">
       {/* Logo */}
       <div className="flex items-center">
         <span className="text-2xl font-bold text-gray-800">LOGO</span>
+      </div>
+      <div className="flex items-center gap-2 ">
+        <Button onClick={handleLogin} variant="outline" className="text-sm"> التسجيل </Button>
       </div>
 
       {/* Desktop Navigation - Navigation Links */}
