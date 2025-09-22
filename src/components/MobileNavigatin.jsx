@@ -9,8 +9,10 @@ import {
 } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 import { navigation, navIcons } from '../constants'
+import { useNavigate } from 'react-router-dom'
 
-const MobileNavigation = () => {
+const MobileNavigation = ({ user, logOut }) => {
+  const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -57,6 +59,33 @@ const MobileNavigation = () => {
                 </Button>
               ))}
             </div>
+            {user ? (
+              <Button
+                onClick={() => {
+                  logOut()
+                  navigate('/login')
+                }}
+                className="text-sm bg-gradient-to-br from-red-600 to-red-500"
+              >
+                تسجيل الخروج
+              </Button>
+            ) : (
+              <div className="hidden items-center gap-2 ">
+                <Button
+                  onClick={() => navigate('/login')}
+                  variant="outline"
+                  className="text-sm"
+                >
+                  تسجيل الدخول{' '}
+                </Button>
+                <Button
+                  onClick={() => navigate('/register')}
+                  className="text-sm bg-gradient-to-br from-indigo-600 to-purple-500"
+                >
+                  انشاء حساب{' '}
+                </Button>
+              </div>
+            )}
           </div>
         </SheetContent>
       </Sheet>
