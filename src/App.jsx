@@ -5,6 +5,8 @@ import About from './pages/About'
 import SignIn from './pages/auth/sign-in/page'
 import SignUp from './pages/auth/sign-up/page'
 import ConfirmEmail from './pages/auth/confirm-email'
+import ContactUs from './pages/ContactUs'
+import StartNow from './pages/StartNow'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path="/login" element={<SignIn />} />
             <Route path="/register" element={<SignUp />} />
             <Route path="/confirm-email" element={<ConfirmEmail />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/start-now" element={<StartNow />} />
           </Routes>
         </div>
       </Router>

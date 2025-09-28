@@ -39,6 +39,7 @@ export const navIcons = [
   {
     name: 'link',
     icon: <IoLink />,
+    path: '/start-now'
   },
   {
     name: 'profile',

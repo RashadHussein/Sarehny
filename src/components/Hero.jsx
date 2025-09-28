@@ -4,6 +4,7 @@ import { RiContactsFill } from 'react-icons/ri'
 import { MdContentCopy } from 'react-icons/md'
 
 import { heroContent } from '@/constants'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -24,12 +25,16 @@ const Hero = () => {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center mb-8 md:mb-16">
-          <Button className="w-full sm:w-auto text-white py-3 md:py-6 px-6 md:px-8 bg-gradient-to-br from-indigo-600 to-purple-500 text-sm md:text-base">
-            <IoSend className="mr-2" /> ابدأ الان
-          </Button>
-          <Button className="w-full  sm:w-auto bg-transparent text-black py-3 md:py-6 px-6 md:px-8 hover:text-white text-sm md:text-base">
-            <RiContactsFill className="mr-2" /> تواصل معنا
-          </Button>
+          <Link to='/start-now'>          
+            <Button className="w-full sm:w-auto text-white py-3 md:py-6 px-6 md:px-8 bg-gradient-to-br from-indigo-600 to-purple-500 text-sm md:text-base">
+              <IoSend className="mr-2" /> ابدأ الان
+            </Button>
+          </Link>
+          <Link to='/contact-us'>
+            <Button className="w-full  sm:w-auto bg-transparent text-black py-3 md:py-6 px-6 md:px-8 hover:text-white text-sm md:text-base">
+              <RiContactsFill className="mr-2" /> تواصل معنا
+            </Button>
+          </Link>
         </div>
 
         {/* URL Copy Section */}
