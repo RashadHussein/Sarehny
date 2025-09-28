@@ -7,7 +7,6 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 const Navigation = () => {
   const { user, logout } = useAuth()
-  console.log(user)
   const navigate = useNavigate()
 
   return (

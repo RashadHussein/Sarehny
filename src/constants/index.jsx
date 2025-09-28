@@ -10,6 +10,10 @@ import { FaStar } from 'react-icons/fa'
 
 export const navigation = [
   {
+    section: '/',
+    name: 'الرئيسية',
+  },
+  {
     section: '/features',
     name: 'المزايا',
   },
