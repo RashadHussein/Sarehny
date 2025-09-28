@@ -26,7 +26,9 @@ const StartNow = () => {
             </h1>
             <p>احصل على رسائل مجهولةمن أصدقائك - ممتعة, حقيفية, وخاصة دائماَ</p>
         </div>
+
         <div className="sm:px-4 md:px-8 lg:px-12 flex flex-col gap-10">
+            {/* STEP ONE */}
             <div className="flex flex-col p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl rounded-xl gap-4 bg-white/80">
                 <p className="text-indigo-800 font-semibold sm:text-lg md:text-xl lg:text-2xl flex items-center gap-2">
                     <FaCopy className="text-indigo-700 text-xl" /> 
@@ -51,6 +53,7 @@ const StartNow = () => {
                 </div>
             </div>
 
+            {/* STEP TWO */}
             <div className="flex flex-col p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl rounded-xl gap-4 bg-white/80">
                 <p className="text-indigo-800 font-semibold sm:text-lg md:text-xl lg:text-2xl flex items-center gap-2">
                     <FaShareAlt className="text-indigo-700 text-xl" /> 
@@ -81,6 +84,7 @@ const StartNow = () => {
                 </div>
             </div>
 
+            {/* EXPLAINE HOW TO ADD LINK FOR USER */}
             <div className="flex flex-col p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl rounded-xl gap-4 bg-white/80">
                 <p className="text-indigo-800 font-semibold sm:text-lg md:text-xl lg:text-2xl flex items-center gap-2">
                     <FaExclamationCircle className="text-indigo-700 text-xl" /> 
@@ -90,7 +94,7 @@ const StartNow = () => {
                     {addLinkData.map((card, index) => (                        
                         <div key={index} className="p-4 sm:p-6 md:p-8 lg:p-10 rounded-lg shadow-xl grid grid-cols-12 items-center gap-4">
                             <div 
-                            className={`col-span-12 sm:col-span-4 text-indigo-700 text-3xl mt-4 bg-slate-200 rounded-xl w-full py-10 flex justify-center border border-dashed border-indigo-200 transition-transform duration-300
+                            className={`col-span-12 sm:col-span-4 text-indigo-700 text-3xl mt-4 bg-slate-200 rounded-xl w-full py-16 flex justify-center border border-dashed border-indigo-200 transition-transform duration-300
                             ${index % 2 !== 0 ? "sm:order-2" : "sm:order-1"}`}
                             >
                                 {card.icon}
