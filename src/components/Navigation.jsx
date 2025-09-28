@@ -2,7 +2,7 @@ import { useAuth } from '@/contexts/AuthContext'
 import { navIcons, navigation } from '../constants'
 import MobileNavigation from './MobileNavigatin'
 import { Button } from './ui/button'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 const Navigation = () => {
@@ -61,14 +61,16 @@ const Navigation = () => {
       {/* Desktop Navigation - Action Icons */}
       <div className="hidden md:flex">
         <ul className="flex gap-6 items-center">
-          {navIcons.map(({ name, icon }) => (
+          {navIcons.map(({ name, icon, path }) => (
             <li key={name}>
-              <button
-                className="text-xl font-semibold cursor-pointer hover:text-blue-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"
-                aria-label={name}
-              >
-                {icon}
-              </button>
+              <Link to={path}>
+                <button
+                  className="text-xl font-semibold cursor-pointer hover:text-blue-700 transition-colors duration-200 p-2 rounded-lg hover:bg-gray-100"
+                  aria-label={name}
+                >
+                  {icon}
+                </button>
+              </Link>
             </li>
           ))}
         </ul>
