@@ -11,7 +11,7 @@ const Navigation = () => {
   const navigate = useNavigate()
 
   return (
-    <nav className="p-8 container mx-auto flex justify-between items-center">
+    <nav className="p-8 bg-white container mx-auto flex justify-between items-center">
       {/* Logo */}
 
       <div className="block">

@@ -10,19 +10,19 @@ import { FaStar } from 'react-icons/fa'
 
 export const navigation = [
   {
-    section: '#features',
+    section: '/features',
     name: 'المزايا',
   },
   {
-    section: '#testemonials',
+    section: '/testemonials',
     name: 'اراء',
   },
   {
-    section: '#faq',
+    section: '/faq',
     name: 'الأسئلة',
   },
   {
-    section: '#contact',
+    section: '/contact-us',
     name: 'تواصل',
   },
 ]
@@ -39,7 +39,7 @@ export const navIcons = [
   {
     name: 'link',
     icon: <IoLink />,
-    path: '/start-now'
+    path: '/start-now',
   },
   {
     name: 'profile',
