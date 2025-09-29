@@ -1,15 +1,20 @@
-
+import { useState } from "react";
 
 const ContactUs = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    
     const ourEmail = 'example@gmail.com';
-    const ourPhone = '01012345678'
+    const ourPhone = '01012345678';
   
     const ourPages = [
         {title: 'فيسبوك', path: '#'},
         {title: 'تويتر', path: '#'},
         {title: 'انستجرام', path: '#'},
-    ]
+    ];  
 
+    
     return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto border rounded-2xl shadow-lg p-8">
@@ -25,6 +30,8 @@ const ContactUs = () => {
                     <div className="w-full flex flex-col gap-4 text-start">
                         <label htmlFor="name" className="font-semibold">الاسم:</label>
                         <input 
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         type="text" 
                         form="name" 
                         placeholder="اكتب اسمك الكامل" 
@@ -34,6 +41,8 @@ const ContactUs = () => {
                     <div className="w-full flex flex-col gap-4 text-start">
                         <label htmlFor="email" className="font-semibold">البريد الإلكتروني:</label>
                         <input 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         type="email" 
                         form="email" 
                         placeholder="name@example.com" 
@@ -43,6 +52,8 @@ const ContactUs = () => {
                     <div className="w-full flex flex-col gap-4 text-start">
                         <label htmlFor="message" className="font-semibold">الرسالة:</label>
                         <textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                         form="message" 
                         placeholder="اكتب رسالتك هنا..." 
                         className="rounded-lg p-2 w-full tracking-widest bg-slate-200 outline-none"

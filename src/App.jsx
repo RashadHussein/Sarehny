@@ -7,23 +7,26 @@ import SignUp from './pages/auth/sign-up/page'
 import ConfirmEmail from './pages/auth/confirm-email'
 import ContactUs from './pages/ContactUs'
 import StartNow from './pages/StartNow'
+import IsCopiedProvider from './contexts/handleUniqueCode'
 
 function App() {
   return (
     <AuthProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-100">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/login" element={<SignIn />} />
-            <Route path="/register" element={<SignUp />} />
-            <Route path="/confirm-email" element={<ConfirmEmail />} />
-            <Route path="/contact-us" element={<ContactUs />} />
-            <Route path="/start-now" element={<StartNow />} />
-          </Routes>
-        </div>
-      </Router>
+      <IsCopiedProvider>
+        <Router>
+          <div className="min-h-screen bg-gray-100">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/login" element={<SignIn />} />
+              <Route path="/register" element={<SignUp />} />
+              <Route path="/confirm-email" element={<ConfirmEmail />} />
+              <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/start-now" element={<StartNow />} />
+            </Routes>
+          </div>
+        </Router>
+      </IsCopiedProvider>
     </AuthProvider>
   )
 }

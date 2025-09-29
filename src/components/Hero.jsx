@@ -5,8 +5,11 @@ import { MdContentCopy } from 'react-icons/md'
 
 import { heroContent } from '@/constants'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+import { IsCopiedContext } from '@/contexts/handleUniqueCode'
 
 const Hero = () => {
+  const { copiedText, handleCopy, userUniqueCode } = useContext(IsCopiedContext)
   return (
     <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-20">
       <div className="max-w-4xl mx-auto">
@@ -44,9 +47,10 @@ const Hero = () => {
               dir="ltr"
               className="text-sm md:text-base text-gray-700 truncate flex-1"
             >
-              unseen.app/u/yourname
+              {userUniqueCode}
             </p>
-            <MdContentCopy className="cursor-pointer text-gray-600 hover:text-gray-800 transition-colors flex-shrink-0" />
+            <MdContentCopy onClick={handleCopy} className="cursor-pointer text-gray-600 hover:text-gray-800 transition-colors flex-shrink-0" />
+            {copiedText}
           </div>
         </div>
 

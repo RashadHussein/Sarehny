@@ -1,9 +1,12 @@
+import { IsCopiedContext } from "@/contexts/handleUniqueCode";
+import { useContext } from "react";
 import { FaCopy, FaExclamationCircle, FaInstagram, FaLink, FaShareAlt, FaTelegramPlane } from "react-icons/fa"
 import { IoIosAddCircle } from "react-icons/io";
 import { MdContentCopy } from "react-icons/md"
 
 
 const StartNow = () => {
+    const { copiedText, handleCopy, userUniqueCode } = useContext(IsCopiedContext)
 
     const shareLinkData = [
         {num: 1, title: 'افتح إنستغرام', paragraph: 'افتح تطبيق إنستغرام على هاتفك', icon: <FaInstagram />},
@@ -41,15 +44,17 @@ const StartNow = () => {
                         dir="ltr"
                         className="text-sm md:text-base px-4 py-3 text-gray-700 rounded-r-xl bg-slate-200 select-all flex-1 tracking-widest"
                     >
-                        unseen.app/u/yourname
+                        {userUniqueCode}
                     </p>
                     <button
                     dir="ltr"
+                    onClick={handleCopy}
                     className="bg-gradient-to-br text-sm sm:text-base h-full w-fit from-indigo-600 to-indigo-900 text-white px-4 py-3 rounded-l-xl items-center flex gap-2 hover:opacity-90 transition-all duration-200"
                     >
                         انسخ الرابط
                         <MdContentCopy />
                     </button>
+                    {copiedText}
                 </div>
             </div>
 
